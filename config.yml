@@ -1,0 +1,13 @@
+#创建礼包时，默认限定领取次数
+DefaultNumber: 1
+
+#创建礼包时，默认限时CD
+DefaultCooling: 1
+
+#创建礼包时，是否默认开启公告
+EnableMessage: true
+
+#生成礼包兑换码最小的长度
+MinLenght: 10
+#生成礼包兑换码最小的长度
+MaxLenght: 15

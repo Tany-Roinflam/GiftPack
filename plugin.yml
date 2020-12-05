@@ -1,0 +1,24 @@
+name: GiftPack
+main: pers.tany.giftpack.Main
+version: 1.0.0
+author: tany
+depend: [ ProtocolLib ]
+api-version: 1.13
+description: 带界面的礼包插件
+commands:
+  GiftPack:
+    usage: /GiftPack
+    aliases: [ gp ]
+permissions:
+  gp.convert:
+    default: true
+  gp.give:
+    default: true
+  gp.draw:
+    default: true
+  gp.show.*:
+    default: true
+  gp.kit.*:
+    default: op
+  gp.number.*.*:
+    default: op

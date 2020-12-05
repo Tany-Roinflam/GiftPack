@@ -1,0 +1,13 @@
+SuccessfullyReceived: '&a成功领取[name]礼包'
+
+NoNumber: '&c已经到达最大领取次数！'
+
+Cooling: '&c正在冷却！请等待！'
+
+NoPermission: '&c你没有权限领取此礼包！'
+
+DefaultMessage: '&a玩家领取了[name]礼包！'
+
+ConvertKit: '&a成功使用兑换码兑换[name]礼包！'
+
+NoConvertKit: '&c没有这个兑换码！'
