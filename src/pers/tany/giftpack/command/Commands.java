@@ -68,7 +68,7 @@ public class Commands implements CommandExecutor {
                 sender.sendMessage("§f/gp addlore 礼包 lore  §b为这个礼包添加lore（'空格'会自动替换成空格）");
                 sender.sendMessage("§f/gp dellore 礼包  §b删除最后一行lore");
                 sender.sendMessage("§f/gp code  §b查看兑换码指令");
-                sender.sendMessage("§f/gp type 礼包 [normal/daily/weekly/monthly]  §b修改类型为常驻或每日/周/月");
+                sender.sendMessage("§f/gp type 礼包 [normal/daily/weekly/monthly]  §b修改类型为常驻或每日/周/月（刷新时间）");
                 return true;
             }
             if (args[0].equalsIgnoreCase("code")) {
