@@ -16,8 +16,6 @@ permissions:
     default: true
   gp.draw:
     default: true
-  gp.show.*:
-    default: true
   gp.kit.*:
     default: op
   gp.number.*.*:
