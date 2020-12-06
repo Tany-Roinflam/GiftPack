@@ -26,7 +26,6 @@ import java.util.Set;
 
 public class Events implements Listener {
     public static Set<String> createList = new HashSet<String>();
-    boolean close = true;
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent evt) {
@@ -67,42 +66,15 @@ public class Events implements Listener {
                         return;
                     }
                     if (evt.getCurrentItem().getItemMeta().getDisplayName().equals("§a翻到上一页")) {
-                        close = false;
                         new SettingList(player, --page).openInventory();
-                        new BukkitRunnable() {
-
-                            @Override
-                            public void run() {
-                                close = true;
-                            }
-
-                        }.runTaskAsynchronously(Main.plugin);
                         return;
                     }
                     if (evt.getCurrentItem().getItemMeta().getDisplayName().equals("§a翻到下一页")) {
-                        close = false;
                         new SettingList(player, ++page).openInventory();
-                        new BukkitRunnable() {
-
-                            @Override
-                            public void run() {
-                                close = true;
-                            }
-
-                        }.runTaskAsynchronously(Main.plugin);
                         return;
                     }
                     String name = ChatColor.stripColor(evt.getCurrentItem().getItemMeta().getDisplayName());
-                    close = false;
                     new Modification(player, name).openInventory();
-                    new BukkitRunnable() {
-
-                        @Override
-                        public void run() {
-                            close = true;
-                        }
-
-                    }.runTaskAsynchronously(Main.plugin);
                 }
             }
             return;
@@ -400,9 +372,6 @@ public class Events implements Listener {
         if (evt.getInventory().getHolder() == null) {
             return;
         }
-        if (!close) {
-            return;
-        }
         Player player = (Player) evt.getPlayer();
         if (evt.getInventory().getHolder() instanceof Create) {
             Create create = (Create) evt.getInventory().getHolder();
@@ -432,19 +401,6 @@ public class Events implements Listener {
                 }
 
             }.runTaskLater(Main.plugin, 0);
-            return;
-        }
-        if (evt.getInventory().getHolder() instanceof SettingList) {
-            if (close) {
-                new BukkitRunnable() {
-
-                    @Override
-                    public void run() {
-                        new Select(player).openInventory();
-                    }
-
-                }.runTaskLater(Main.plugin, 0);
-            }
             return;
         }
         if (evt.getInventory().getHolder() instanceof ModifyContent) {
