@@ -1,0 +1,56 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+}
+
+version = "1.0.0"
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+// Version strings used for CI
+// Note the spaces before and after the equals sign
+ext.majorVersion = 1
+ext.minorVersion = 0
+ext.minecraftVersion = "1.8"
+
+repositories {
+    jcenter()
+
+    maven {
+        name 'Spigot'
+        url 'https://hub.spigotmc.org/nexus/content/groups/public'
+    }
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    compile 'org.spigotmc:spigot-api:1.12-R0.1-SNAPSHOT'
+    compileOnly "com.github.MilkBowl:VaultAPI:1.7"
+	dependencies { compile fileTree(dir:'lib',include:['*.jar'])}
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+//processResources {
+//    // this will ensure that this task is redone when the versions change.
+//    inputs.property "version", project.version
+//
+//    // replace stuff in mcmod.info, nothing else
+//    from(sourceSets.main.resources.srcDirs) {
+//        include 'plugin.yml'
+//        include 'config.json'
+//        // replace version and mcversion
+//        expand 'version':project.version
+//    }
+//
+//    // copy everything else except the mcmod.info
+//    from(sourceSets.main.resources.srcDirs) {
+//        exclude 'plugin.yml'
+//        exclude 'config.json'
+//    }
+//}

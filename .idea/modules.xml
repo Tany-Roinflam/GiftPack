@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GiftPack.iml" filepath="$PROJECT_DIR$/GiftPack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GiftPack_edit.GiftPack.iml" filepath="$PROJECT_DIR$/.idea/modules/GiftPack_edit.GiftPack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GiftPack_edit.GiftPack.main.iml" filepath="$PROJECT_DIR$/.idea/modules/GiftPack_edit.GiftPack.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GiftPack_edit.GiftPack.test.iml" filepath="$PROJECT_DIR$/.idea/modules/GiftPack_edit.GiftPack.test.iml" />
     </modules>
   </component>
 </project>
