@@ -65,11 +65,11 @@ public class Events implements Listener {
                     if (evt.getCurrentItem().getItemMeta().getDisplayName().equals("§2介绍")) {
                         return;
                     }
-                    if (evt.getCurrentItem().getItemMeta().getDisplayName().equals("§a翻到上一页")) {
+                    if (evt.getCurrentItem().getItemMeta().getDisplayName().equals("§3上一页")) {
                         new SettingList(player, --page).openInventory();
                         return;
                     }
-                    if (evt.getCurrentItem().getItemMeta().getDisplayName().equals("§a翻到下一页")) {
+                    if (evt.getCurrentItem().getItemMeta().getDisplayName().equals("§6下一页")) {
                         new SettingList(player, ++page).openInventory();
                         return;
                     }
@@ -276,11 +276,11 @@ public class Events implements Listener {
                     if (evt.getCurrentItem().getItemMeta().getDisplayName().equals("§2介绍")) {
                         return;
                     }
-                    if (evt.getCurrentItem().getItemMeta().getDisplayName().equals("§a翻到上一页")) {
+                    if (evt.getCurrentItem().getItemMeta().getDisplayName().equals("§3上一页")) {
                         new DrawList(player, --page).openInventory();
                         return;
                     }
-                    if (evt.getCurrentItem().getItemMeta().getDisplayName().equals("§a翻到下一页")) {
+                    if (evt.getCurrentItem().getItemMeta().getDisplayName().equals("§6下一页")) {
                         new DrawList(player, ++page).openInventory();
                         return;
                     }
